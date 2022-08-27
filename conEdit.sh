@@ -15,6 +15,7 @@
 #Github: https://github.com/hazmat86
 #This script allows pipes your config files into dmenu and allows for a quick and easy way to select the one you want to edit.
 
+term="kitty"
 editor="nvim"
 qtile="$HOME/.config/qtile/config.py"
 neovim="$HOME/.config/nvim/init.vim"
@@ -35,15 +36,15 @@ then
 	exit 
 elif [ "$file" == "Neovim" ];
 then
-	$editor $neovim
+	$term $editor $neovim
 elif [ "$file" == "Emacs" ];
 then
-	$editor $emacs
+	$term $editor $emacs
 elif [ "$file" == "Bash" ];
 then
-	$editor $bash
+	$term $editor $bash
 elif [ "$file" == "qTile" ];
 then 
-	$editor $qtile
+	$term $editor $qtile
 fi
 
